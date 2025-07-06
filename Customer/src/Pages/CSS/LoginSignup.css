@@ -1,0 +1,171 @@
+/* CSS for LoginSignup Component */
+
+/* --- Custom Login/Signup UI for FarMart --- */
+.custom-login-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7fbe8 0%, #f7fbe8 60%, #f5f9d2 100%);
+  padding: 0 1rem;
+}
+
+.custom-login-leaf {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-login-leaf svg {
+  background: #a4d96c;
+  color: #fff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  box-shadow: 0 2px 12px rgba(164,217,108,0.10);
+}
+
+.custom-login-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(60, 180, 80, 0.10), 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 420px;
+  width: 100%;
+  padding: 2.5rem 2.2rem 2rem 2.2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-login-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #181c1f;
+  font-family: 'Poppins', sans-serif;
+}
+.custom-login-brand {
+  color: #7bb661;
+}
+.custom-login-subtitle {
+  text-align: center;
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+}
+
+.custom-login-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.custom-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.custom-input-icon {
+  position: absolute;
+  left: 1.1rem;
+  color: #a4d96c;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+.custom-input-group input {
+  width: 100%;
+  padding: 0.85rem 1.1rem 0.85rem 2.8rem;
+  border: 2px solid #a4d96c;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  font-family: 'Poppins', sans-serif;
+  background: #f7fbe8;
+  color: #222;
+  transition: border 0.2s;
+}
+.custom-input-group input:focus {
+  border-color: #7bb661;
+  outline: none;
+  background: #f5f9d2;
+}
+
+.custom-login-btn-main {
+  width: 100%;
+  background: #a4d96c;
+  color: #fff;
+  border: none;
+  padding: 1rem 0;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+}
+.custom-login-btn-main:hover {
+  background: #7bb661;
+}
+
+.custom-login-link {
+  text-align: center;
+  color: #7bb661;
+  font-size: 1rem;
+  margin: 1.1rem 0 0.2rem 0;
+}
+.custom-login-link span {
+  color: #7bb661;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 0.2rem;
+}
+
+.custom-login-back {
+  text-align: center;
+  color: #222;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.custom-login-back:hover {
+  color: #7bb661;
+}
+
+/* Remove old blue and agreement styles */
+.loginSignup-agree, .loginSignup-agree input, .loginSignup-agree p {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .custom-login-card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .custom-login-title {
+    font-size: 1.3rem;
+  }
+  .custom-login-leaf svg {
+    width: 48px;
+    height: 48px;
+    padding: 7px;
+  }
+  .custom-login-fields input {
+    font-size: 0.95rem;
+  }
+  .custom-login-btn-main {
+    font-size: 0.98rem;
+  }
+}
+  

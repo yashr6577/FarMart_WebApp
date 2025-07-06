@@ -1,0 +1,630 @@
+/* Modern Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 2.5rem;
+    height: 80px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Logo Section */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  .nav-logo img {
+    width: auto;
+    height: 45px;
+    object-fit: contain;
+  }
+  
+  .nav-logo p {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2c5530;
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+  
+  /* Menu Links */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .nav-menu li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.75rem 0;
+    position: relative;
+  }
+  
+  .nav-menu li:hover a {
+    color: #38a169;
+    transform: translateY(-1px);
+  }
+  
+  /* Active indicator */
+  .active-indicator {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, #38a169, #68d391);
+    border: none;
+    border-radius: 2px;
+    margin: 0;
+  }
+  
+  /* Dropdown Toggle Icon (Hamburger) */
+  .nav-dropdown {
+    display: none;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-dropdown.open {
+    transform: rotate(90deg);
+  }
+  
+  /* Login / Cart Section */
+  .nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  /* Login Button */
+  .nav-login-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: #a4d96c;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  
+  .nav-login-btn:hover {
+    background: #7bb661;
+  }
+  
+  /* Profile Section */
+  .nav-profile-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-profile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #a4d96c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+    border: none;
+  }
+  
+  .nav-profile-icon:hover {
+    background: #7bb661;
+  }
+  
+  .nav-profile-icon svg {
+    color: #fff;
+    width: 26px;
+    height: 26px;
+  }
+  
+  /* Profile Dropdown */
+  .nav-profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+    min-width: 160px;
+    z-index: 1001;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .nav-profile-dropdown button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-profile-dropdown button:hover {
+    background: #f7fafc;
+    color: #38a169;
+  }
+  
+  .nav-profile-dropdown button:last-child {
+    color: #e53e3e;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 0.25rem;
+    padding-top: 0.75rem;
+  }
+  
+  .nav-profile-dropdown button:last-child:hover {
+    background: #fed7d7;
+    color: #c53030;
+  }
+  
+  /* Cart Section */
+  .nav-cart-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #fed7d7;
+  }
+  
+  .nav-cart-section:hover {
+    transform: scale(1.05);
+    border-color: #fc8181;
+    box-shadow: 0 4px 15px rgba(252, 129, 129, 0.2);
+  }
+  
+  .nav-cart-icon {
+    width: 24px;
+    height: 24px;
+    fill: #e53e3e;
+  }
+  
+  /* Cart Count Badge */
+  .nav-cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #e53e3e, #fc8181);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(229, 62, 62, 0.3);
+  }
+  
+  /* --------------------------------------
+     RESPONSIVE STYLES
+  ----------------------------------------- */
+  
+  /* Collapse the menu into a dropdown at 1024px */
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 0 2rem;
+    }
+    
+    .nav-menu {
+      gap: 2rem;
+    }
+  }
+  
+  /* Collapse the menu into a dropdown at 900px */
+  @media (max-width: 900px) {
+    .navbar {
+      padding: 0 1.5rem;
+    }
+  
+    /* Hide the desktop menu */
+    .nav-menu {
+      display: none;
+    }
+  
+    /* Show the hamburger icon */
+    .nav-dropdown {
+      display: block;
+    }
+  
+    /* When .nav-dropdown has the 'open' class toggled, show the menu */
+    .nav-dropdown.open + .nav-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      gap: 1rem;
+      z-index: 999;
+      border-top: 1px solid #e2e8f0;
+    }
+  
+    .nav-dropdown.open + .nav-menu li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-dropdown.open + .nav-menu li a {
+      padding: 1rem 0;
+      font-size: 1.1rem;
+    }
+  
+    .nav-login-cart {
+      gap: 1rem;
+    }
+  }
+  
+  /* Further reduce spacing for very small screens */
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 0 1rem;
+      height: 70px;
+    }
+  
+    .nav-logo img {
+      height: 35px;
+    }
+  
+    .nav-login-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.8rem;
+    }
+  
+    .nav-profile-icon,
+    .nav-cart-section {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .nav-profile-icon svg,
+    .nav-cart-icon {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .nav-dropdown.open + .nav-menu {
+      top: 70px;
+    }
+  }
+  
+  /* --- Custom Navbar for FarMart --- */
+  .custom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0 3rem;
+    height: 80px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .custom-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-icon-bg {
+    background: #a4d96c;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-icon {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .logo-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #7bb661;
+    line-height: 1;
+  }
+  .logo-subtitle {
+    font-size: 1rem;
+    color: #a4a4a4;
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  
+  .custom-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .custom-nav-menu li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 48px;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: none;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .custom-nav-menu li.active .nav-link {
+    color: #7bb661;
+    position: relative;
+  }
+  .custom-nav-menu li.active .nav-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 8px;
+    height: 3px;
+    border-radius: 2px;
+    background: #7bb661;
+  }
+  .custom-nav-menu li .nav-link:hover {
+    color: #7bb661;
+    background: none;
+  }
+  .custom-nav-menu li .nav-link {
+    background: none;
+  }
+  
+  .categories-btn {
+    background: #eafbe2;
+    color: #7bb661;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    height: 100%;
+  }
+  .categories-btn:hover {
+    background: #d2f5b0;
+    color: #7bb661;
+  }
+  .chevron-icon {
+    font-size: 1rem;
+  }
+  .categories-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+  }
+  .dropdown-link {
+    color: #374151;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    margin-left: 10px;
+    background: none;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 8px;
+  }
+  .dropdown-link:hover {
+    background: #eafbe2;
+    color: #7bb661;
+  }
+  
+  .custom-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cart-icon-bg {
+    background: #a4d96c;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .cart-icon-bg:hover {
+    background: #7bb661;
+  }
+  .cart-icon {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  /* Cart Count Badge for FarMart */
+  .cart-count-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 20px;
+    height: 20px;
+    background: #f7b731;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(229, 62, 62, 0.3);
+    padding: 0 4px;
+    line-height: 1;
+  }
+  
+  .profile-icon-bg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.2rem;
+    cursor: pointer;
+  }
+  .profile-modal {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(60, 180, 80, 0.10), 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+  .profile-modal-username {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  .profile-modal-logout {
+    background: #a4d96c;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .profile-modal-logout:hover {
+    background: #7bb661;
+  }
+  
+  /* Orders Button */
+  .nav-orders-btn {
+    background: none;
+    border: none;
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0;
+  }
+  .nav-orders-btn:hover, .custom-nav-menu li.active .nav-orders-btn {
+    color: #7bb661;
+    background: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .custom-navbar {
+      padding: 0 1.5rem;
+    }
+    .custom-nav-menu {
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 800px) {
+    .custom-navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 0.5rem 0.5rem;
+    }
+    .custom-nav-logo {
+      margin-bottom: 0.5rem;
+    }
+    .custom-nav-menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .custom-login-cart {
+      margin-top: 0.5rem;
+    }
+  }
+  

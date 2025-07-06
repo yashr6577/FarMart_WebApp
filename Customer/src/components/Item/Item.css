@@ -1,0 +1,325 @@
+.item {
+    background-color: #f9fafb; /* Light background for contrast */
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover effect for item */
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    background-color: #e0f2fe; /* Light blue background on hover */
+}
+
+/* Product Image */
+.item img {
+    width: 100%;
+    height: 180px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Ensures the image maintains aspect ratio and covers the area */
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+.item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Product Name */
+.item-name {
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #374151; /* Darker gray for text */
+    text-align: center;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.item:hover .item-name {
+    color: #1f2937; /* Darker text on hover */
+}
+
+/* Product Price */
+.item-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #10b981; /* Green for price */
+    margin: 10px 0;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.item:hover .item-price {
+    color: #059669; /* Slightly darker green on hover */
+}
+
+/* Farmer Details (State and District) */
+.item-farmer-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #6b7280; /* Muted gray for farmer details */
+}
+
+.item-state, .item-district {
+    font-weight: 500;
+}
+
+/* Hover effect for farmer details */
+.item:hover .item-farmer-details {
+    color: #374151; /* Slightly darker color on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 1280px) {
+    .item {
+        width: 260px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .item {
+        width: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .item {
+        width: 200px;
+        padding: 12px;
+    }
+
+    .item-name {
+        font-size: 16px;
+    }
+
+    .item-price {
+        font-size: 18px;
+    }
+
+    .item-farmer-details {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 170px;
+        padding: 10px;
+    }
+
+    .item-name {
+        font-size: 15px;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    .item-farmer-details {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .item {
+        width: 140px;
+        padding: 8px;
+    }
+
+    .item-name {
+        font-size: 14px;
+    }
+
+    .item-price {
+        font-size: 14px;
+    }
+
+    .item-farmer-details {
+        font-size: 11px;
+    }
+}
+
+.modern-item-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(60, 180, 80, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  max-width: 320px;
+  width: 100%;
+  transition: box-shadow 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+.modern-item-card:hover {
+  box-shadow: 0 8px 32px rgba(60, 180, 80, 0.16), 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-4px) scale(1.02);
+}
+.item-badges {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  pointer-events: none;
+}
+.item-type-badge {
+  background: #7bb661;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.3rem 0.9rem;
+  box-shadow: 0 2px 8px rgba(123,182,97,0.10);
+  pointer-events: auto;
+}
+.item-state-badge {
+  background: #f7b731;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  box-shadow: 0 2px 8px rgba(247,183,49,0.10);
+  pointer-events: auto;
+}
+.item-img-link {
+  display: block;
+  margin: 0 auto;
+  margin-top: 32px;
+  width: 90%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(60, 180, 80, 0.06);
+}
+.item-img-modern {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #f7fbe8;
+  transition: transform 0.2s;
+}
+.modern-item-card:hover .item-img-modern {
+  transform: scale(1.04);
+}
+.item-info-modern {
+  padding: 1.2rem 1.2rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.item-name-modern {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+.item-desc-modern {
+  font-size: 0.98rem;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+.item-farmer-modern {
+  background: #f7fbe8;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.97rem;
+  color: #7bb661;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+.item-farmer-location {
+  color: #a4a4a4;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+.item-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+.item-price-modern {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #7bb661;
+}
+.item-add-cart-btn {
+  background: #a4d96c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.item-add-cart-btn:hover {
+  background: #7bb661;
+}
+.item-add-cart-icon {
+  font-size: 1.1rem;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .modern-item-card {
+    min-width: 180px;
+    max-width: 220px;
+  }
+  .item-img-modern {
+    height: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .modern-item-card {
+    min-width: 140px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .item-img-link {
+    margin-top: 18px;
+    border-radius: 10px;
+  }
+  .item-img-modern {
+    border-radius: 10px;
+    height: 90px;
+  }
+  .item-info-modern {
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    gap: 0.4rem;
+  }
+  .item-name-modern {
+    font-size: 1rem;
+  }
+  .item-price-modern {
+    font-size: 1rem;
+  }
+  .item-add-cart-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

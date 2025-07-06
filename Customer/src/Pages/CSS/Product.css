@@ -1,0 +1,308 @@
+/* Container for product details and farmer details */
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left side: Product details */
+  .product-details-left {
+    width: 60%;
+  }
+  
+  /* Right side: Farmer details */
+  .product-details-right {
+    width: 35%;
+    text-align: left;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+  }
+  
+  /* Styling the product image */
+  .product-details-image {
+    width: 300px;  /* Fixed width */
+    height: 270px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  
+  /* Product name styling */
+  .product-details-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* General styling for product details */
+  .product-details p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Label styling for each field */
+  .product-details strong {
+    color: #333;
+  }
+  
+  /* Farmer details section */
+  .product-farmer-details {
+    margin-bottom: 20px;
+  }
+  
+  .product-farmer-details h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-farmer-details p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  /* Styling for quantity and add-to-cart buttons */
+  .quantity-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .quantity-section input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #219150;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .product-details {
+      flex-direction: column;
+    }
+  
+    .product-details-left, .product-details-right {
+      width: 100%;
+      border: none;
+      padding: 0;
+    }
+  
+    .quantity-section {
+      justify-content: center;
+    }
+  }
+  
+  /* Modern Product Page Styles */
+  .product-modern-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7fbe8 0%, #f7fbe8 60%, #f5f9d2 100%);
+    padding: 48px 0 48px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .product-modern-card {
+    display: flex;
+    gap: 2.5rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(60, 180, 80, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+    max-width: 950px;
+    width: 100%;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  .product-modern-left {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .product-modern-image {
+    width: 340px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+    margin-bottom: 1.2rem;
+    background: #f7fbe8;
+  }
+  .product-modern-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .product-modern-name {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .product-modern-type-row {
+    display: flex;
+    gap: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .product-modern-type-badge {
+    background: #e6f9e6;
+    color: #7bb661;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    padding: 0.3rem 1.1rem;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.06);
+  }
+  .product-modern-qty-badge {
+    background: #fffde4;
+    color: #f7b731;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    padding: 0.3rem 1.1rem;
+    box-shadow: 0 2px 8px rgba(247,183,49,0.06);
+  }
+  .product-modern-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .product-modern-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #7bb661;
+  }
+  .product-modern-unit {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 600;
+  }
+  .product-modern-desc {
+    font-size: 1.13rem;
+    color: #444;
+    margin-bottom: 0.3rem;
+  }
+  .product-modern-expiry {
+    font-size: 1.05rem;
+    color: #a4d96c;
+    margin-bottom: 0.7rem;
+  }
+  .product-modern-farmer-card {
+    background: #f7fbe8;
+    border-radius: 12px;
+    padding: 1.1rem 1.5rem;
+    margin: 1.1rem 0 0.7rem;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.06);
+    width: 90%;
+  }
+  .product-modern-farmer-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #7bb661;
+    margin-bottom: 0.5rem;
+  }
+  .product-modern-farmer-row {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 0.2rem;
+  }
+  .product-modern-cart-row {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 1.2rem;
+  }
+  .product-modern-qty-input {
+    width: 60px;
+    text-align: center;
+    padding: 7px;
+    font-size: 1.1em;
+    border: 2px solid #a4d96c;
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #fff;
+    color: #222;
+    font-weight: 600;
+  }
+  .product-modern-addcart-btn {
+    background: #a4d96c;
+    color: #fff;
+    padding: 12px 32px;
+    font-size: 1.15em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(164,217,108,0.10);
+    transition: background 0.2s;
+  }
+  .product-modern-addcart-btn:hover {
+    background: #7bb661;
+  }
+  .product-loading-modern, .product-notfound-modern {
+    text-align: center;
+    color: #7bb661;
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 900px) {
+    .product-modern-card {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .product-modern-left, .product-modern-right {
+      width: 100%;
+      padding: 0;
+    }
+    .product-modern-image {
+      width: 100%;
+      max-width: 340px;
+      height: 220px;
+    }
+  }
+  @media (max-width: 600px) {
+    .product-modern-card {
+      padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    }
+    .product-modern-image {
+      max-width: 98vw;
+      height: 160px;
+    }
+    .product-modern-name {
+      font-size: 1.2rem;
+    }
+  }
+  

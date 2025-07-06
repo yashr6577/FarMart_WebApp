@@ -1,0 +1,567 @@
+/* Modern ecommerce hero styles with soft green/yellow, rounded cards, and responsive layout */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 350px;
+  max-height: 600px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #e6f9e6 0%, #fffde4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(120deg, rgba(230,249,230,0.7) 0%, rgba(255,253,228,0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  max-width: 480px;
+  width: 90vw;
+  margin: 0 1rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60, 180, 80, 0.10), 0 2px 8px rgba(255, 230, 0, 0.08);
+  border: 1.5px solid #e6f9e6;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.5px;
+}
+
+.slide-button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  margin-bottom: 1.1rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #8bc34a 0%, #ffe066 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(139,195,74,0.10);
+  cursor: pointer;
+  transition: background-position 0.3s, box-shadow 0.3s, transform 0.2s;
+  outline: none;
+}
+.slide-button:hover {
+  background-position: right;
+  box-shadow: 0 4px 16px rgba(139,195,74,0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.slide-discount {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fbc02d;
+  margin: 0.5rem 0 0.2rem 0;
+  letter-spacing: 0.5px;
+}
+
+.slide-code {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #388e3c;
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+.slide-description {
+  font-size: 0.98rem;
+  color: #5d6d5d;
+  margin-top: 0.7rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero-container {
+    height: 55vh;
+    min-height: 260px;
+    max-height: 400px;
+  }
+  .slide-content {
+    padding: 1.5rem 1rem 1rem 1rem;
+    max-width: 95vw;
+  }
+  .slide-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-container {
+    height: 38vh;
+    min-height: 180px;
+    max-height: 260px;
+  }
+  .slide-content {
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+    border-radius: 14px;
+  }
+  .slide-title {
+    font-size: 1.1rem;
+  }
+  .slide-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .slide-discount {
+    font-size: 0.95rem;
+  }
+  .slide-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Farmart-style hero section */
+.hero-farmart {
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(34, 51, 34, 0.55);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-farmart {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 1rem;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.18);
+  box-shadow: 0 8px 32px rgba(60, 180, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title-farmart {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1px;
+  color: #ffe066;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.hero-subtitle-farmart {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #e6f9e6;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.hero-desc-farmart {
+  font-size: 1.08rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #fffde4;
+  line-height: 1.6;
+}
+
+.hero-btn-farmart {
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2e7d32;
+  background: linear-gradient(90deg, #ffe066 0%, #e6f9e6 100%);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(139,195,74,0.10);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  outline: none;
+}
+.hero-btn-farmart:hover {
+  background: linear-gradient(90deg, #e6f9e6 0%, #ffe066 100%);
+  color: #1b5e20;
+  box-shadow: 0 4px 16px rgba(139,195,74,0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 700px) {
+  .hero-title-farmart {
+    font-size: 2rem;
+  }
+  .hero-subtitle-farmart {
+    font-size: 1.1rem;
+  }
+  .hero-content-farmart {
+    padding: 1.2rem 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-title-farmart {
+    font-size: 1.3rem;
+  }
+  .hero-subtitle-farmart {
+    font-size: 0.9rem;
+  }
+  .hero-desc-farmart {
+    font-size: 0.9rem;
+  }
+  .hero-btn-farmart {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Main hero layout */
+.hero-main-farmart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: linear-gradient(120deg, #fffde4 0%, #f7fbe8 100%);
+  padding: 48px 0 32px 0;
+  gap: 32px;
+}
+
+.hero-left-farmart {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 7vw;
+  min-width: 340px;
+}
+
+.hero-badge-farmart {
+  display: flex;
+  align-items: center;
+  background: #e6f9e6;
+  color: #388e3c;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 22px;
+  padding: 0.3rem 1.2rem 0.3rem 0.7rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(60,180,80,0.07);
+  gap: 0.5rem;
+}
+.hero-badge-icon-farmart {
+  width: 22px;
+  height: 22px;
+  margin-right: 0.4rem;
+}
+
+.hero-font-heavy {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 900 !important;
+  letter-spacing: -1px;
+}
+
+.hero-headline-farmart {
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 1.1rem;
+  line-height: 1.1;
+}
+.hero-green {
+  color: #6dbf4b;
+}
+.hero-yellow {
+  color: #ffd600;
+}
+
+.hero-desc-farmart {
+  font-size: 1.18rem;
+  color: #444;
+  margin-bottom: 2.1rem;
+  max-width: 520px;
+}
+
+.hero-btn-row-farmart {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+.hero-shop-btn-farmart {
+  background: #8bc34a;
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(139,195,74,0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.hero-shop-btn-farmart:hover {
+  background: #6dbf4b;
+  transform: translateY(-2px) scale(1.03);
+}
+.hero-arrow-farmart {
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+}
+.hero-learn-btn-farmart {
+  background: #fff;
+  color: #6dbf4b;
+  font-size: 1.18rem;
+  font-weight: 700;
+  border: 2px solid #cdebb0;
+  border-radius: 10px;
+  padding: 0.9rem 2.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.hero-learn-btn-farmart:hover {
+  background: #e6f9e6;
+  color: #388e3c;
+  border: 2px solid #8bc34a;
+}
+
+.hero-features-farmart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.2rem;
+}
+.hero-feature-farmart {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  border-radius: 50px;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+  min-width: 180px;
+  box-shadow: none;
+}
+.hero-feature-icon-farmart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  background: #e6f9e6;
+  margin-right: 0.7rem;
+}
+.hero-feature-bg-green {
+  background: #e6f9e6 !important;
+  color: #6dbf4b;
+}
+.hero-feature-bg-yellow {
+  background: #fffde4 !important;
+  color: #ffd600;
+}
+.hero-feature-title-farmart {
+  font-weight: 900;
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 0.1rem;
+}
+.hero-feature-desc-farmart {
+  font-size: 0.98rem;
+  color: #888;
+}
+
+.hero-right-farmart {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 320px;
+  padding-right: 4vw;
+}
+.hero-img-card-farmart {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(60, 180, 80, 0.10), 0 2px 8px rgba(255, 230, 0, 0.08);
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 420px;
+  min-height: 320px;
+  max-width: 520px;
+  max-height: 450px;
+  overflow: hidden;
+}
+.hero-img-farmart {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 2px 8px rgba(60,180,80,0.08);
+}
+
+@media (max-width: 1100px) {
+  .hero-main-farmart {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0 24px 0;
+    gap: 18px;
+  }
+  .hero-left-farmart {
+    padding-left: 4vw;
+    align-items: flex-start;
+  }
+  .hero-right-farmart {
+    padding-right: 2vw;
+    min-width: 260px;
+  }
+  .hero-img-card-farmart {
+    min-width: 320px;
+    min-height: 220px;
+    max-width: 420px;
+    max-height: 260px;
+  }
+  .hero-headline-farmart {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 700px) {
+  .hero-main-farmart {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 0 10px 0;
+    gap: 10px;
+  }
+  .hero-left-farmart {
+    padding-left: 2vw;
+    min-width: 0;
+  }
+  .hero-headline-farmart {
+    font-size: 1.3rem;
+  }
+  .hero-img-card-farmart {
+    min-width: 180px;
+    min-height: 120px;
+    max-width: 98vw;
+    max-height: 180px;
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-headline-farmart {
+    font-size: 1.1rem;
+  }
+  .hero-desc-farmart {
+    font-size: 0.9rem;
+  }
+  .hero-shop-btn-farmart, .hero-learn-btn-farmart {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .hero-feature-title-farmart {
+    font-size: 0.9rem;
+  }
+  .hero-feature-desc-farmart {
+    font-size: 0.8rem;
+  }
+}
+
+/* Only keep the large image card styles for the hero banner */
+.hero-img-card-farmart-large {
+  min-width: 500px;
+  min-height: 480px;
+  max-width: 600px;
+  max-height: 600px;
+  padding: 0;
+  border-radius: 14px;
+  box-shadow: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-img-farmart-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: none;
+  transition: transform 0.3s;
+}
+.hero-img-card-farmart-large:hover .hero-img-farmart-large {
+  transform: scale(1.02);
+}
+@media (max-width: 1100px) {
+  .hero-img-card-farmart-large {
+    min-width: 320px;
+    min-height: 180px;
+    max-width: 98vw;
+    max-height: 260px;
+    padding: 0;
+  }
+}
+@media (max-width: 700px) {
+  .hero-img-card-farmart-large {
+    min-width: 180px;
+    min-height: 120px;
+    max-width: 98vw;
+    max-height: 180px;
+    padding: 0;
+  }
+}
+  
