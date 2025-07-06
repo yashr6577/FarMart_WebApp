@@ -37,7 +37,7 @@ FarMart is designed to digitize the agricultural supply chain by providing:
 
 | Home | Crop Listings | Order Placement | 
 |------------------------|-----------------|----------------|
-| ![Listings](screenshots/buyer_home.png) | ![Tracking](screenshots/buyer-listings.png) | ![Order](screenshots/buyer-orders.png) |
+| ![Home](screenshots/buyer_home.png) | ![Listings](screenshots/buyer_listings.png) | ![Order](screenshots/buyer_orders.png) |
 
 > ℹ️ Tip: Store your images in a `screenshots/` folder at the root of your project. Use optimized `.png` or `.webp` files for best performance.
 
