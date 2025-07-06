@@ -29,7 +29,7 @@ FarMart is designed to digitize the agricultural supply chain by providing:
 
 | Crop Management | Add Crop | Order Requests |
 |------------------|----------|----------------|
-| ![Crop Management](screenshots/farmer-crop-management.png) | ![Add Crop](screenshots/farmer-add-crop.png) | ![Order Requests](screenshots/farmer-orders.png) |
+| ![Crop Management](screenshots/farmer_listings.png) | ![Market Prices](screenshots/farmer_marketprices.png) | ![Weather](screenshots/farmer_weather.png) |
 
 ---
 
